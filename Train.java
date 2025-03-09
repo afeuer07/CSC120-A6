@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Train implements TrainRequirements{
+public class Train {
    
     //attributes
     private Engine engine;
