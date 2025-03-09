@@ -54,8 +54,6 @@ public class Engine {
      * @return true if the engine starts, false otherwise
      */
     public Boolean go() {
-        //use a timer and spend a certain amt of fuel per second? 
-        //for now, just consume half of fuel
         if (this.curFuel == 0) {
             return false;
         } else{
