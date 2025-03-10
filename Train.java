@@ -10,7 +10,10 @@ public class Train {
     
     /**
      * Constructor for Train
-     * @param cap Train's capacity
+     * @param f FuelType of 
+     * @param maxFuel double fuel capacity of the engine
+     * @param cars int number of cars on train
+     * @param cap int capacity of each car
      */
     public Train(FuelType f, double curFuel, double maxFuel, int cars, int cap){
         this.engine = new Engine(f, curFuel, maxFuel);
@@ -69,7 +72,7 @@ public class Train {
     /**
      * Print list of all passengers aboard the train
      */
-    public void printManifest(){
+    public void printManifest(){        
         System.out.println("Train Manifest:");
         for (int i = 0; i < cars.size(); i++){
             System.out.println("Car " + i + ":");

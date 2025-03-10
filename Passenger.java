@@ -19,7 +19,6 @@ public class Passenger {
     /**
      * Call addPassenger to board the car
      * @param c Car to board
-     * @return true if passenger boards, false otherwise
      */
     public void boardCar(Car c) {
         if (c.addPassenger(this)){
@@ -32,7 +31,6 @@ public class Passenger {
     /**
      * Call removePassenger to get off the car
      * @param c Car to get off
-     * @return true if passenger gets off, false otherwise
      */ 
     public void getOffCar(Car c) {
         if (c.removePassenger(this)){
