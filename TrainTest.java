@@ -56,9 +56,8 @@ public class TrainTest {
     @Test
     public void testPassengerBoardCarWithSpace() {
         this.p = new Passenger("Anna");
-
         Car c = new Car(1);
-        p.boardCar(c);
+        assertTrue(p.boardCar(c));
     }
 
     @Test
