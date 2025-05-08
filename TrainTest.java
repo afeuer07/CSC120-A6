@@ -63,13 +63,17 @@ public class TrainTest {
 
     @Test
     public void testPassengerBoardCarFull() {
-        this.p = new Passenger("Anna");
-
-        Passenger pTest = new Passenger("Anna");
         Car c = new Car(1);
-        c.addPassenger(pTest);
-        assertFalse(c.addPassenger(pTest));
+        Passenger p1 = new Passenger("Anna");
+        Passenger p2 = new Passenger("Bob");
+
+        p1.boardCar(c);
+        assertEquals(0, c.seatsRemaining(), 0.01);  // confirm p1 took the seat
+
+        p2.boardCar(c);
+        assertEquals(0, c.seatsRemaining(), 0.01);  // confirm p2 didn't affect seat count
     }
+
 
     // Train Tests
     /*
@@ -111,8 +115,6 @@ public class TrainTest {
     
     }
 
-    //this is failing but I don't know why, the expected and actual look exactly the same...
-    //anyway, ran out of time to figure out and have too much other work to use an extension rn
     @Test
     public void testTrainPrintManifest() {
         // Redirect System.out to capture output
