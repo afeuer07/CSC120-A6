@@ -19,12 +19,15 @@ public class Passenger {
     /**
      * Call addPassenger to board the car
      * @param c Car to board
+     * @return boolean, true if boarded
      */
-    public void boardCar(Car c) {
+    public boolean boardCar(Car c) {
         if (c.addPassenger(this)){
             System.out.println(this.name + " has boarded the car.");
+            return true;
         } else {
             System.out.println("No room in this car.");
+            return false;
         }
     }
 
