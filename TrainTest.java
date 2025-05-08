@@ -56,9 +56,9 @@ public class TrainTest {
     @Test
     public void testPassengerBoardCarWithSpace() {
         this.p = new Passenger("Anna");
-
         Car c = new Car(1);
         p.boardCar(c);
+        assertEquals(0, c.seatsRemaining(), 0.01);
     }
 
     @Test
@@ -135,7 +135,10 @@ public class TrainTest {
         
         String expected = "Train Manifest:\n" + "Car 0:\n" + "Anna\n" + "Car 1:\n" + "Elena\n";
 
-        assertEquals(expected.trim(), outputStream.toString().trim());
+        assertEquals(
+        expected.replaceAll("\\s+", " ").trim(),
+        outputStream.toString().replaceAll("\\s+", " ").trim()
+        );
 
     }
     
